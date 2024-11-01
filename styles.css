@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #121212; /* Dark greyish black */
+    color: #e0e0e0; /* Light grey for text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    background: #1e1e1e; /* Darker grey */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #2ecc71; /* Bright green */
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.cell {
+    background: #34495e; /* Greyish black */
+    border: 2px solid #2c3e50; /* Darker grey */
+    border-radius: 8px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ecf0f1; /* Light grey for text */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background: #2c3e50; /* Darker grey */
+    transform: scale(1.05);
+}
+
+.reset-btn {
+    background: #2ecc71; /* Bright green */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.reset-btn:hover {
+    background: #27ae60; /* Slightly darker green */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cell {
+        height: 80px;
+        width: 80px;
+        font-size: 1.5rem;
+    }
+}
